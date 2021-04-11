@@ -1,7 +1,12 @@
 const express = require('express');
-const app = express();
+const registerController = require('./Controller/registerController');
 
-const PORT = process.env.PORT || 3000;
+const app = express();
+const PORT = process.env.PORT || 3001;
+app.use(bodyParser.json());
+
+
+app.use('/register', registerController);
 
 app.get('/', (_req, res) => {
   res.send("Hello Stone");
