@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import AppContext from './AppContext';
 
@@ -8,18 +8,26 @@ function Provider({ children }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  useEffect(() => {
-    validateRegister(name, email, password);
-  }, [name, email, password]);
+
+  // useEffect(() => {
+  //   validateRegister(name, email, password);
+  // }, [name, email, password]);
 
   const validateRegister = (name, email, password) => {
-    const minCharacter = 5;
-    const minLengthPassword = 6;
+    const minCharacter = 2;
+    const minLengthPassword = 5;
+    console.log('tá passando aqui');
     const expectedFormat = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+$/;
     const isValidEmail = expectedFormat.test(email);
-    if (isValidEmail && name < minCharacter && password < minLengthPassword) return setValidForm(true);
-    setValidForm(false);
+    console.log('qual email:', email)
+    console.log('email valido:', isValidEmail)
+    if (isValidEmail && name.length > minCharacter && password.length > minLengthPassword) {
+      setRegister(name, email, password);
+      return setValidForm(true);
+    }
+    return false;
   };
+
   const contextValue = {
     name,
     setName,
