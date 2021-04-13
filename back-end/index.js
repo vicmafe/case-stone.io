@@ -1,8 +1,7 @@
 const express = require('express');
+const cors = require('cors');
 const registerController = require('./Controller/registerController');
 const bodyParser = require('body-parser');
-
-
 
 const app = express();
 const PORT = 3001;
