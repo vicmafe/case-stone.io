@@ -18,7 +18,7 @@ function Provider({ children }) {
     console.log('qual email:', email)
     console.log('email valido:', isValidEmail)
     if (isValidEmail && name.length > minCharacter && password.length > minLengthPassword) {
-      setRegister(name, email, password);
+      setRegister({name, email, password});
       return setValidForm(true);
     }
     return false;

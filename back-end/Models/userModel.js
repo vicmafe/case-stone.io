@@ -1,6 +1,6 @@
 const connection = require('./connections');
 
-const userRegister = async (user) => {
+const registerUser = async (user) => {
   const { name, email, password } = user;
   try {
     await connection
@@ -8,21 +8,32 @@ const userRegister = async (user) => {
         [name, email, password, '']);
     return user;
   } catch (e) {
-    return e.message;
+    return null;
   }
 };
 
-const findUserByEmail = async (email) => {
+const loginUser = async (emailUser, passwordUser) => {
+  try {
+    const [[{ id, name, email, password }]] = await connection
+      .execute('SELECT * FROM users WHERE email=? and password=?', [emailUser, passwordUser]);
+    return (id, name, email, password);
+  } catch (e) {
+    return null;
+  }
+};
+
+const searchUserByEmail = async (email) => {
   try {
     const user = await connection
-      .execute('SELECT *  FROM Trybeer.users WHERE email=?', [email]);
+      .execute('SELECT *  FROM users WHERE email=?', [email]);
     return user;
   } catch (e) {
-    return e.message;
+    return null;
   }
-}
+};
 
 module.exports = { 
-  userRegister,
-  findUserByEmail,
+  registerUser,
+  loginUser,
+  searchUserByEmail,
 };
