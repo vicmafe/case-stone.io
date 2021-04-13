@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router';
 import AppContext from '../../context/AppContext';
 import * as S from './style';
@@ -8,23 +8,23 @@ import Button from '../../components/Button';
 
 
 const Register = () => {
-  const { validForm, register } = useContext(AppContext);
+  const { validForm, setValidForm, register } = useContext(AppContext);
   const [status, setStatus] = useState('');
   const history = useHistory();
   const saveUser = async () => {
     const { name, email, password } = register;
-    const sendDataUser = await Axios.post('http://localhost:8001/register', { name, email, password });
+    console.log('register:', register);
+    const sendDataUser = await Axios
+      .post('http://localhost:8001/register', { name, email, password });
     console.log('retorno request', sendDataUser)
-    // if (sendDataUser.data === 'string') {
-    //   setStatus('E-mail already in database.');
-    //   return 'done';
-    // }
-    return history.push('/login');
+    if (sendDataUser.status !== 201) {
+      setValidForm(false);
+      setTimeout(() => history.push('/'),4000);
+      return setStatus(sendDataUser.data.message);
+    }
+    setTimeout(() => history.push('/login'),3000)
+    return setStatus(sendDataUser.data.message);
   };
-  useEffect(() => {
-    const MaxTime = 2500;
-    setTimeout(() => setStatus(''), MaxTime);
-  }, [status]);
   return (
     <S.Container>
       <S.Title>Registre-se</S.Title>

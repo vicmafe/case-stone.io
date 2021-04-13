@@ -27,11 +27,11 @@ export const Buttons = styled.div`
 export const Status = styled.p`
   position: absolute;
   left: 0;
-  top: 5%;
+  top: 25%;
   padding: 2%;
   border-top-right-radius: 10px;
   color: white; // color
-  background-color: #6665DD; // color
+  background-color: #9d0208; // color
   transition: 450ms;
   transform: translateX(${({ status }) => (status === '' ? '-101%' : '0')});
 `;
