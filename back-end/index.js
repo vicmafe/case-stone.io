@@ -4,9 +4,7 @@ const registerController = require('./Controller/registerController');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = 8001;
-app.use(cors());
-
+const PORT = 3001;
 app.use(bodyParser.json());
 
 
