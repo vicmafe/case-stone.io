@@ -14,6 +14,7 @@ const Form = () => {
   return (
     <form>
       <Input
+        color="#d00000"
         type="text"
         name="Nome"
         value={ name }
@@ -21,6 +22,7 @@ const Form = () => {
         dataTestId="signup-name"
       />
       <Input
+        color="#d00000"
         type="email"
         name="Email"
         value={ email }
@@ -28,6 +30,7 @@ const Form = () => {
         dataTestId="signup-email"
       />
       <Input
+        color="#d00000"
         type="password"
         name="Senha"
         value={ password }

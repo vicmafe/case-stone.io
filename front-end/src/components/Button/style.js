@@ -5,12 +5,12 @@ import styled from 'styled-components';
 const SButton = styled.button`
   padding: 15px;
   width: 100%;
-  background-color: ${({ disabled }) => (disabled ? '#8B8AE5' : '#6665DD')};
+  background-color: ${({ disabled }) => (disabled ? '#adb5bd' : '#9d0208')};
   transition: 650ms;
   border: none;
   outline: none;
   cursor: ${({ disabled }) => (!disabled ? 'pointer' : 'default')};
-  color: #DDDDE4;
+  color: #f8f9fa;
   border-radius: 8px;
   text-align: center;
   margin: 2% 0;

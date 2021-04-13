@@ -9,10 +9,6 @@ function Provider({ children }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // useEffect(() => {
-  //   validateRegister(name, email, password);
-  // }, [name, email, password]);
-
   const validateRegister = (name, email, password) => {
     const minCharacter = 2;
     const minLengthPassword = 5;
@@ -27,7 +23,6 @@ function Provider({ children }) {
     }
     return false;
   };
-
   const contextValue = {
     name,
     setName,
