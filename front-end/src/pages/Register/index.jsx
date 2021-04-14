@@ -23,8 +23,9 @@ const Register = () => {
       return setStatus(sendDataUser.data.message);
     }
     setTimeout(() => history.push('/login'),3000)
-    return setStatus(sendDataUser.data.message);
+    return ;
   };
+
   return (
     <S.Container>
       <S.Title>Registre-se</S.Title>

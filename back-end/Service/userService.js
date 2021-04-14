@@ -7,7 +7,10 @@ const userRegister = async (user) => {
 
 const userLogin = async (email, password) => {
   const userLogged = await userModel.loginUser(email, password);
-  return userLogged;
+  console.log(userLogged)
+  const [[BinaryRow]] = userLogged;
+  if (BinaryRow) return BinaryRow;
+  return false;
 };
 
 const findUserByEmail = async (email) => {

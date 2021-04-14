@@ -5,24 +5,40 @@ import AppContext from './AppContext';
 function Provider({ children }) {
   const [register, setRegister] = useState({});
   const [validForm, setValidForm] = useState(false);
+  const [validLogin, setValidLogin] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const emailIsValid = (email) => {
+    const expectedFormat = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+$/;
+    return  expectedFormat.test(email);
+  };
+
+  const passwordIsValid = (password) => {
+    const minLengthPassword = 5;
+    if (password.length > minLengthPassword) return true;
+    return false;
+  };
+
   const validateRegister = (name, email, password) => {
     const minCharacter = 2;
-    const minLengthPassword = 5;
-    console.log('tá passando aqui');
-    const expectedFormat = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+$/;
-    const isValidEmail = expectedFormat.test(email);
-    console.log('qual email:', email)
-    console.log('email valido:', isValidEmail)
-    if (isValidEmail && name.length > minCharacter && password.length > minLengthPassword) {
+    if (emailIsValid(email) && name.length > minCharacter && passwordIsValid(password)) {
       setRegister({name, email, password});
       return setValidForm(true);
     }
     return false;
   };
+
+  const validDataLogin = (email, password) => {
+    const emailOk = emailIsValid(email);
+    const passwordOk = passwordIsValid(password);
+    if (emailOk && passwordOk) {
+      return setValidLogin(true);
+    }
+    return false;
+  };
+
   const contextValue = {
     name,
     setName,
@@ -35,6 +51,9 @@ function Provider({ children }) {
     setValidForm,
     register,
     setRegister,
+    validDataLogin,
+    validLogin,
+    setValidLogin,
   };
 
   return (
