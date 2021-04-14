@@ -6,6 +6,8 @@ function Provider({ children }) {
   const [register, setRegister] = useState({});
   const [validForm, setValidForm] = useState(false);
   const [validLogin, setValidLogin] = useState(false);
+  const [comics, setComics] = useState([]);
+  const [character, setCharacter] = useState([]);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -54,6 +56,10 @@ function Provider({ children }) {
     validDataLogin,
     validLogin,
     setValidLogin,
+    comics,
+    setComics,
+    character,
+    setCharacter,
   };
 
   return (
