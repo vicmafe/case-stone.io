@@ -1,12 +1,15 @@
 import React, { useEffect, useState, useContext } from 'react';
+import { useHistory } from 'react-router';
 import Input from '../Input';
 import AppContext from '../../context/AppContext';
+
 
 const Form = () => {
   const { validateRegister } = useContext(AppContext);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory();
   useEffect(() => {
     validateRegister(name, email, password);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -36,6 +39,11 @@ const Form = () => {
         value={ password }
         onChange={ ({ target }) => setPassword(target.value) }
         dataTestId="signup-password"
+      />
+      <Input
+        type="checkbox"
+        name="Sou usuário Existente"
+        onChange={ () => history.push('/login') }
       />
     </form>
   );

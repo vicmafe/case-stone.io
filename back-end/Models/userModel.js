@@ -14,9 +14,9 @@ const registerUser = async (user) => {
 
 const loginUser = async (emailUser, passwordUser) => {
   try {
-    const [[{ id, name, email, password }]] = await connection
+    const userLoged = await connection
       .execute('SELECT * FROM users WHERE email=? and password=?', [emailUser, passwordUser]);
-    return (id, name, email, password);
+    return userLoged;
   } catch (e) {
     return null;
   }
