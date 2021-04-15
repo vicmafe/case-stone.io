@@ -1,4 +1,4 @@
-# vicmafe-stone
+# PROJETO app-stone
 
 ## Descrição do Projeto
 
