@@ -77,7 +77,7 @@
 
 ## Demonstração da aplicação
 
-  <img alt="gif app" title="#gifApp" src="./app-stone-14.04.21.gif" width="350px;" />
+  <img alt="gif app" title="#gifApp" src="./app-stone-14.04.21.gif" width="450px;" />
 
 ## Sobre o autor
 
