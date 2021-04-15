@@ -1,4 +1,4 @@
-# PROJETO app-stone
+# Projeto app-stone
 
 ## Descrição do Projeto
 
@@ -17,9 +17,9 @@
 
 ## Objetivo
 
-• <p>Implementar uma aplicação client-side onde será encontrar todas as informações sobre as comics e characters da marvel;
+•<p>Implementar uma aplicação client-side onde será encontrar todas as informações sobre as comics e characters da marvel;
 </p>
-• <p>Implementar uma aplicação server-side que conterá funções de autenticação, gerenciamentos de usuários e de comics/characters favoritos.</p>
+•<p>Implementar uma aplicação server-side que conterá funções de autenticação, gerenciamentos de usuários e de comics/characters favoritos.</p>
 
 ## Roadmap
 
@@ -55,10 +55,10 @@
 
 ## Por onde começar
 
-• <p>Se você quer interagir com a aplicação funcionando, basta acessar<a href=https://vicmafe.github.io/case-stone.io/>🔗 aqui</a>;
+•<p>Se você quer interagir com a aplicação funcionando, basta acessar<a href=https://vicmafe.github.io/case-stone.io/>🔗 aqui</a>;
 </p>
 
-• <p>Para Rodar localmente, siga os passos:
+•<p>Para Rodar localmente, siga os passos:
 1 - abra o terminal;<br>
 2 - digite: mkdir app-stone && cd app-stone;<br>
 3 - git clone https://github.com/vicmafe/case-stone.io.git;<br>
@@ -77,14 +77,14 @@
 
 ## Demonstração da aplicação
 
-  <img alt="gif app" title="#gifApp" src="./app-stone-14.04.21.png" />
+  <img alt="gif app" title="#gifApp" src="./app-stone-14.04.21.gif" />
 
 ## Sobre o autor
 
-<a href="https://https://www.linkedin.com/in/victor-mateus-ferreira/">
+<a href="https://www.linkedin.com/in/victor-mateus-ferreira/">
  <img style="border-radius: 50%;" src="./Avatar.jpeg" width="100px;" alt=""/>
  <br />
  <sub><b>Vctor Mateus</b></sub></a>🚀</a>
 
 
-Feito com ❤️ por Victor MAteus 👋🏽 Entre em contato!
+Feito com ❤️ por Victor Mateus 👋🏽 Entre em contato!
