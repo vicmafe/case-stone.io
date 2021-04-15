@@ -22,8 +22,9 @@ const Register = () => {
       setTimeout(() => history.push('/'),4000);
       return setStatus(sendDataUser.data.message);
     }
-    setTimeout(() => history.push('/login'),3000)
-    return ;
+    setStatus(sendDataUser.data.message)
+    setTimeout(() => history.push('/login'),3700)
+    return setTimeout(() => setStatus(''), 4000);
   };
 
   return (
