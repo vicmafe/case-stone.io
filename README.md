@@ -54,3 +54,25 @@
 - [ ] Criação pagina detalhes character / comics
 - [ ] Favoritar character e comics
 - [ ] Endpoint para salvar favorito no dbs
+
+## Por onde começar
+
+<p>Se você quer interagir com a aplicação funcionando, basta acessar<a href="https://gist.github.com/jeansflores/5f4746ce1129e27da6f451069780ccf7">🔗 aqui</a>;
+</p> •
+
+<p>Para Rodar localmente, siga os passos:
+1 - abra o terminal;
+2 - digite: mkdir app-stone && cd app-stone;
+3 - git clone https://github.com/vicmafe/case-stone.io.git;
+4 - cd case-stone.io.;
+5 - É preciso estar com mysql intalado e no status ativo;
+6 - digite: npm install mysql2;
+7 - Entre no console do mysql: digite: mysql -u root -p;
+8 - Rode o script criação do dbs: digite: source script/sql;
+9 - No terminal na raiz do projeto digite: cd back-end;
+10 - Instale as dependencias: Digite: npm install;
+11 - Rode o back-end com o nodemon: Digite: npm start;
+11 - No terminal na raiz do projeto digite: cd front-end;
+10 - Instale as dependencias: Digite: npm install;
+11 - Inicie a aplicação: Digite: npm start;
+</p> •
