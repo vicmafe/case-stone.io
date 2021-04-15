@@ -55,7 +55,7 @@
 
 ## Por onde começar
 
-•<p>Se você quer interagir com a aplicação funcionando, basta acessar<a href=https://vicmafe.github.io/case-stone.io/>🔗 aqui</a>;
+•<p>Se você quer interagir com a aplicação funcionando, basta acessar<a href=https://vicmafe.github.io/case-stone.io//>🔗 aqui</a>;
 </p>
 
 •<p>Para Rodar localmente, siga os passos:
