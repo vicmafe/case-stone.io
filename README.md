@@ -2,16 +2,17 @@
 
 ## Descrição do Projeto
 
-<p align="center">Solução do proprietario do repositorio para 
-construir aplicação para <a href="https://gist.github.com/jeansflores/5f4746ce1129e27da6f451069780ccf7">🔗 este</a> case proposto pela <a href="https://www.stone.com.br/">🔗 Stone</a></p>
+<p align="center">Solução do proprietario deste repositorio para resolver <a href="https://gist.github.com/jeansflores/5f4746ce1129e27da6f451069780ccf7">🔗 este</a> case proposto pela <a href="https://www.stone.com.br/">🔗 Stone</a></p>
+
+## Indice
 
 <p align="center">
- <a href="##objetivo">Objetivo</a> •
- <a href="##roadmap">Roadmap</a> • 
- <a href="##tecnologias">Status do Projeto</a> •
- <a href="##tecnologias">Features</a> •
- <a href="##tecnologias">Por onde começar</a> •
- <a href="##contribuicao">Demonstração da aplicação</a> • 
+ <a href="##objetivo">Objetivo</a> •<br>
+ <a href="##roadmap">Roadmap</a> •<br>
+ <a href="##tecnologias">Status do Projeto</a> •<br>
+ <a href="##tecnologias">Features</a> •<br>
+ <a href="##tecnologias">Por onde começar</a> •<br>
+ <a href="##contribuicao">Demonstração da aplicação</a> •<br> 
 </p>
 
 ## Objetivo
