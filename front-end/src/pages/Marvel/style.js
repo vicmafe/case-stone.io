@@ -41,3 +41,18 @@ export const Image = styled.div`
   width: 80%;
   justify-content: center;
 `;
+export const Card = styled.div`
+  border: 1px solid white;
+  background-color: #EEE9E9;
+  width: 210px;
+  height: 230px;
+  border-radius: 15px;
+  margin:1%;
+  padding:.5%;
+`;
+export const Text = styled.p`
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+`;

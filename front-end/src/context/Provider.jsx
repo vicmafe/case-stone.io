@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import AppContext from './AppContext';
+import GetDataMarvel from '../services/GetMarvel';
 
 function Provider({ children }) {
   const [register, setRegister] = useState({});
@@ -40,6 +41,20 @@ function Provider({ children }) {
     }
     return false;
   };
+
+  const fetchItemsMarvel = async (type) => {
+    const responseFetch = await GetDataMarvel(type);
+    const { data: { results }} = responseFetch
+    if (type !== 'characters') return setCharacter(results);
+    return setComics(results);
+  };
+
+  useEffect(() => {
+    const fetchs = () => {
+      fetchItemsMarvel('comics');
+      fetchItemsMarvel('characters');
+    } 
+  fetchs()}, [])
 
   const contextValue = {
     name,
