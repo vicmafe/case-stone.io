@@ -1,19 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useContext } from 'react';
 import AppContext from '../../context/AppContext';
 import Button from '../../components/Button';
 import * as S from './style';
 import marvelHerois from '../../marvelHerois.jpg';
+import { useHistory } from 'react-router-dom';
 
 const Marvel = () => {
-  const [products, setProducts] = useState([])
-  const { comics, characters } = useContext(AppContext);
+  const { setSearchMArvel } = useContext(AppContext);
+  const history = useHistory();
   const fetchMarvel = async (type) => {
-    if (type === 'character') return setProducts(characters);
-    console.log('o q é o product dentro do if', products);
-    return setProducts(comics);
+    if (type === 'character') {
+      setSearchMArvel('characters');
+      return history.pushState('/characters');
+    }
+    setSearchMArvel('comics');
+    return history.pushState('/comics');
   }
-  console.log('o que é product fora do if', products);
   return (
     <S.Container>
       <S.Image>
@@ -38,13 +41,6 @@ const Marvel = () => {
           </Button>
         </S.ButtonB>
       </S.Buttons>
-      {!products ? <div></div> : products.map((product, index) => (
-        <S.Card key={index}>
-          <S.Text>
-            {product.name}
-          </S.Text>
-        </S.Card>
-      ))}
     </S.Container>
   )
 };

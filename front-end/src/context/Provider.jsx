@@ -12,6 +12,7 @@ function Provider({ children }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [searchMarvel, setSearchMarvel] = useState('');
 
   const emailIsValid = (email) => {
     const expectedFormat = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+$/;
@@ -75,6 +76,8 @@ function Provider({ children }) {
     setComics,
     character,
     setCharacter,
+    searchMarvel,
+    setSearchMarvel
   };
 
   return (

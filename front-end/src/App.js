@@ -4,6 +4,8 @@ import Provider from './context/Provider';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Marvel from './pages/Marvel';
+import Characters from './pages/Characters';
+import Comics from './pages/Comics';
 
 function App() {
   return (
@@ -16,8 +18,10 @@ function App() {
           <Route exact path="/register" component={ Register } />
           <Route exact path="/login" component={ Login } />
           <Route exact path="/marvel" component={ Marvel } />
+          <Route exact path="/characters" component={ Characters } />
+          <Route exact path="/comics" component={ Comics } />
         </Switch>
-      </BrowserRouter>
+' 0'      </BrowserRouter>
     </Provider>
   );
 }
